@@ -25,8 +25,8 @@ Flexbox is used as a fallback so that browsers which don't support grid will sti
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     font-family: "Roboto", Arial, sans-serif;
     min-height: 100vh;
 }
@@ -74,116 +74,9 @@ a {
     background-color: #666;
 }
 
-/* Masthead */
-
-.masthead {
-    display: flex;
-    flex-basis: 5.6rem;
-    align-items: center;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    background-color: #fff;
-    padding: 0 2.2rem;
-    box-shadow: 0 0.2rem 0.2rem rgba(17, 17, 17, 0.2);
-    z-index: 1;
-}
-
-.logo {
-    flex: 0 0 15rem;
-    margin-left: 2.5rem;
-}
-
-.site-search {
-    flex-grow: 1;
-    margin: 0 2.5rem;
-}
-
-.menu-btn {
-    font-size: 1.6rem;
-    color: #888;
-    padding: 0 0.5rem;
-}
-
-.logo h1 {
-    font-family: "Oswald", Arial, sans-serif;
-    font-size: 2.2rem;
-    font-weight: 600;
-    letter-spacing: -0.12rem;
-    color: #282828;
-    white-space: nowrap;
-    cursor: pointer;
-}
-
-.logo-icon {
-    color: #f00;
-    padding-right: 0.5rem;
-}
-
-.site-search {
-    display: flex;
-    height: 3.2rem;
-}
-
-.search-input,
-.search-btn {
-    border: 0.1rem solid #ccc;
-}
-
-.search-input {
-    flex-basis: 60rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-    border-top-left-radius: 0.3rem;
-    border-bottom-left-radius: 0.3rem;
-    border-right: none;
-    padding-left: 1rem;
-    color: var(--black-text);
-}
-
-.search-input::-webkit-input-placeholder {
-    color: var(--grey-text);
-}
-
-.search-input:-ms-input-placeholder {
-    color: var(--grey-text);
-}
-
-.search-input::-ms-input-placeholder {
-    color: var(--grey-text);
-}
-
-.search-input::placeholder {
-    color: var(--grey-text);
-}
-
-.search-btn {
-    flex: 0 0 6.5rem;
-    border-top-right-radius: 0.3rem;
-    border-bottom-right-radius: 0.3rem;
-    background-color: #f8f8f8;
-    color: var(--black-text);
-    cursor: pointer;
-}
-
-.search-btn:hover {
-    background-color: #f0f0f0;
-}
-
-.user-menu {
-    flex-basis: 16rem;
-    display: flex;
-    font-size: 1.6rem;
-    color: var(--grey-text);
-}
-
-.user-menu .btn {
-    flex: 0 0 4rem;
-}
-
 /* Channel banner */
 
-.channel-banner {
+.site-banner {
     /* flex-basis: 25vw;
     display: flex;
     justify-content: flex-end;
@@ -198,22 +91,22 @@ a {
     background-color: var(--choco-bg); /* darkgrey ; */
 }
 
-.channel-banner img {
+.site-banner img {
     height: 30vh;
 }
 
-.channel-social-links {
+.site-social-links {
     padding: 1rem;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.channel-social-links li {
+.site-social-links li {
     display: inline-block;
     font-size: 1.8rem;
     padding-right: 1rem;
 }
 
-.channel-social-links li:last-of-type {
+.site-social-links li:last-of-type {
     padding-right: 0;
 }
 
@@ -229,19 +122,17 @@ a {
     color: #3b5999;
 }
 
-/* Channel info */
-
-.channel-info {
+.site-info {
     background-color: #fafafa;
     padding: 1.6rem 0 1.6rem 0;
 }
 
-.channel-info .wrapper {
+.site-info .wrapper {
     display: flex;
     align-items: center;
 }
 
-.channel-icon {
+.site-icon {
     flex-basis: 8rem;
     height: 8rem;
     /* border-radius: 50%; */
@@ -249,7 +140,7 @@ a {
     position: relative;
 }
 
-.channel-icon img {
+.site-icon img {
     position: absolute;
     width: 20rem;
     border-radius: 50%;
@@ -257,12 +148,12 @@ a {
     border: #fafafa solid 4px
 }
 
-.channel-title {
+.site-title {
     flex: 1 1 auto;
     margin: 0 2rem;
 }
 
-.channel-title h1 {
+.site-title h1 {
     font-size: 2.4rem;
     font-weight: 400;
     color: var(--black-text);
@@ -270,29 +161,29 @@ a {
     margin-bottom: 0;
 }
 
-.channel-title i {
+.site-title i {
     font-size: 1.4rem;
     color: #6e6e6e;
 }
 
-.channel-subscriber-count {
+.site-headline {
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.8;
     color: var(--grey-text);
 }
 
-.channel-subscribe {
+.site-version {
     display: flex;
     height: 3.7rem;
     color: var(--grey-text);
 }
 
-.channel-subscribe i {
+.site-version i {
     font-size: 30px;
 }
 
-.subscribe-btn {
+.version-label {
     width: 14.2rem;
     font-size: 1.4rem;
     font-weight: 500;
@@ -300,32 +191,32 @@ a {
     margin-right: 0.4rem;
 }
 
-/* .subscribe-btn > i {
+/* .version-label > i {
     margin: 0 0 0 0.7rem;
     width: 2rem;
 } */
 
-.notification-btn {
+.version-icon {
     width: 4rem;
     font-size: 2rem;
 }
 
 /* Channel navigation */
 
-.channel-nav {
+.site-nav {
     background-color: #fafafa;
     padding: 0.5rem 0 0.5rem 0;
     white-space: nowrap;
     overflow-x: auto;
 }
 
-.channel-nav ul {
+.site-nav ul {
     display: flex;
     list-style-type: none;
     padding-left: 0px;
 }
 
-.channel-nav li {
+.site-nav li {
     list-style-type: none;
 }
 
@@ -350,80 +241,76 @@ a {
 
 /* Channel content */
 
-.channel-content .wrapper {
+.site-content .wrapper {
     display: flex;
     padding-top: 2.4rem;
     padding-bottom: 2.4rem;
     color: var(--grey-text);
 }
 
-.channel-videos {
-    display: flex;
-    flex-direction: column;
+.site-items {
     min-width: 42.5rem;
     max-width: 107rem;
 }
 
-.video-title {
+.item-title {
     color: var(--black-text);
 }
 
-.video-meta-data,
-.video-description {
+.item-meta-data,
+.item-description {
     font-size: 1.3rem;
     font-weight: 400;
 }
 
-.video-description {
+.item-description {
     max-width: 60rem;
     line-height: 1.4;
 }
 
-.video-meta-data li {
+.item-meta-data li {
     display: inline-block;
 }
 
-.video-creator {
+.item-creator {
     padding-right: 0.4rem;
 }
 
-.video-views::after {
+.item-views::after {
     content: "\00B7";
     font-size: 2.2rem;
     padding-left: 0.4rem;
     vertical-align: middle;
 }
 
-/* Featured video */
+/* Featured */
 
-.featured-video {
+.featured-item {
     display: flex;
     cursor: pointer;
 }
 
-.featured-video .video-info {
+.featured-item .item-info {
     flex: 1;
 }
 
-.featured-video .video-thumbnail {
+.featured-item .item-thumbnail {
     margin-right: 1.5rem;
 }
 
-.featured-video .video-title {
+.featured-item .item-title {
     font-size: 1.8rem;
     font-weight: 400;
 }
 
-/* Video playlists */
-
-.playlist {
+.pet-content {
     position: relative;
     padding-bottom: 1rem;
     overflow-x: auto;
     margin-top: 2rem;
 }
 
-.playlist-title {
+.category-title {
     font-size: 1.6rem;
     font-weight: 500;
     position: -webkit-sticky;
@@ -434,33 +321,29 @@ a {
     color: var(--black-text);
 }
 
-.playlist-videos {
-    display: flex;
-}
-
-.playlist-video {
+.playlist-item {
     flex-basis: 21rem;
     margin-right: 0.5rem;
     cursor: pointer;
 }
 
-.playlist-video .video-title {
+.playlist-item .item-title {
     font-size: 1.4rem;
     font-weight: 500;
     padding: 0.5rem 0;
 }
 
-.playlist-video .video-creator {
+.playlist-item .item-creator {
     display: block;
 }
 
 /* Recommended channels */
 
-.recommended-channels {
+.list-devs {
     margin-left: 2rem;
 }
 
-.recommended-channels-heading {
+.list-devs-heading {
     font-size: 1.4rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -468,12 +351,12 @@ a {
     margin-bottom: 2rem;
 }
 
-.recommended-channels-group:first-of-type {
+.list-devs-group:first-of-type {
     margin-bottom: 2rem;
     border-bottom: 0.1rem solid #eee;
 }
 
-.recommended-channel {
+.list-dev {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -481,7 +364,7 @@ a {
     cursor: pointer;
 }
 
-.recommended-channel-icon {
+.list-dev-icon {
     width: 2.4rem;
     height: 2.4rem;
     border-radius: 50%;
@@ -497,7 +380,7 @@ a {
     font-size: 22px;
 }
 
-.recommended-channel-title {
+.list-dev-title {
     flex: 1 0 50%;
     font-size: 1.4rem;
     font-weight: 500;
@@ -505,7 +388,7 @@ a {
     margin: 1rem 0 1rem 0;
 }
 
-.recommended-channel-subscribe {
+.list-dev-subscribe {
     font-size: 1.4rem;
     font-weight: 500;
     color: var(--grey-text);
@@ -529,93 +412,72 @@ Remove or comment-out the code block below to see how the browser will fall-back
         grid-template-rows: 30vw repeat(3, auto);
     }
 
-    .masthead {
-        display: grid;
-        grid-template-columns: auto 15rem 1fr 16rem;
-        grid-column-gap: 2.5rem;
-    }
-
-    .site-search {
-        display: grid;
-        grid-template-columns: minmax(0, 60rem) 6.5rem;
-    }
-
-    .user-menu {
-        display: grid;
-        grid-template-columns: repeat(4, 4rem);
-    }
-
-    .channel-info .wrapper {
+    .site-info .wrapper {
         display: grid;
         /* grid-template-columns: 8rem minmax(auto, 1fr) auto; */
         grid-template-columns: 20rem minmax(auto, 1fr) auto;
         grid-column-gap: 5rem;
     }
 
-    .channel-subscribe {
+    .site-version {
         display: grid;
         grid-template-columns: repeat(2, auto);
         grid-column-gap: 0.4rem;
     }
 
-    .channel-content .wrapper {
+    .site-content .wrapper {
         display: grid;
         grid-template-columns: 5fr 1fr;
         grid-gap: 2rem;
     }
 
-    .channel-videos {
+    .site-items {
         display: grid;
         grid-row-gap: 2rem;
         max-width: 100%;
     }
 
-    .featured-video {
+    .featured-item {
         display: grid;
         grid-template-columns: auto 1fr;
         grid-gap: 1.5rem;
     }
 
-    .playlist-videos {
+    .category-content {
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: 21rem;
         grid-column-gap: 0.5rem;
     }
 
-    .recommended-channel {
+    .list-dev {
         display: grid;
         grid-template-columns: 2.4rem 2.4rem 1fr;
         grid-gap: 0.8rem;
     }
 
-    .recommended-channel-subscribe {
+    .list-dev-subscribe {
         grid-column: 1 / -1;
     }
 
     .logo,
-    .site-search,
-    .channel-title,
-    .subscribe-btn,
-    .playlist,
-    .featured-video .video-thumbnail,
-    .playlist-video,
-    .recommended-channels,
-    .recommended-channel-icon,
-    .recommended-channel-subscribe {
+    .site-title,
+    .version-label,
+    .pet-content,
+    .featured-item .item-thumbnail,
+    .playlist-item,
+    .list-devs,
+    .list-dev-icon,
+    .list-dev-subscribe {
         margin: 0;
     }
 
     @media screen and (max-width: 60rem) {
-        .masthead {
-            grid-template-columns: auto 1fr 16rem;
-        }
-
-        .channel-info .wrapper {
+        .site-info .wrapper {
             grid-template-columns: repeat(2, auto);
         }
 
-        .channel-content .wrapper {
+        .site-content .wrapper {
             grid-template-columns: minmax(42.5rem, 1fr);
         }
     }
@@ -628,31 +490,30 @@ Remove or comment-out the code block below to see how the browser will fall-back
         flex-grow: 1;
     }
 
-    .channel-info {
+    .site-info {
         padding-bottom: 1.6rem;
     }
 
-    .channel-info .wrapper {
+    .site-info .wrapper {
         justify-content: space-around;
     }
 
-    .channel-title,
-    .channel-subscribe {
+    .site-title,
+    .site-version {
         flex: 0 0 auto;
         margin: 0;
     }
 
-    .channel-title h1 {
+    .site-title h1 {
         font-size: 1.8rem;
     }
 
-    .channel-videos {
+    .site-items {
         max-width: 100%;
     }
 
-    .recommended-channels,
-    .channel-icon,
-    .site-search {
+    .list-devs,
+    .site-icon {
         display: none;
     }
 }
